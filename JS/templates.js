@@ -12,30 +12,35 @@ export function cards(personaje) {
     }
 
     let list = '';
+    let emoji = '';
     if (personaje instanceof Rey) {
         list = `<li>Años de reinado: ${personaje.yearsOfReign}</li>`;
+        emoji = '👑';
     }
     if (personaje instanceof Luchador) {
         list = `<li>Arma: ${personaje.weapon}</li>
                 <li>Destreza: ${personaje.skill}</li>`;
+        emoji = '🗡';
     }
     if (personaje instanceof Escudero) {
         list = `
                   <li>Peloteo: ${personaje.kissUp}</li>
                   <li>Sirve a: ${personaje.owner}</li>
         `;
+        emoji = '🎓';
     }
     if (personaje instanceof Asesor) {
         list = `
                   <li>Asesora a: ${personaje.client}</li>
         `;
+        emoji = '🛡';
     }
 
     return `
     <li class="character col">
         <div class="card character__card">
             <img
-                src="img/no-one.jpg"
+                src="img/${personaje.image}"
                 alt=" ${personaje.name} - ${personaje.lineage}"
                 class="character__picture card-img-top"
             />
@@ -65,7 +70,7 @@ export function cards(personaje) {
                     </div>
                 </div>
             </div>
-            <i class="emoji"></i>
+            <i class="emoji">${emoji}</i>
         </div>
     </li>
 `;
