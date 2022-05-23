@@ -1,8 +1,9 @@
 export class Personaje {
-    constructor(name, lineage, age, state = 'Alive') {
+    constructor(name, lineage, age) {
         this.name = name;
         this.lineage = lineage;
         this.age = age;
-        this.state = state;
+        this.state = 'Alive';
+        this.serie = 'Juego de Tronos';
     }
 }
