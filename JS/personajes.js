@@ -36,5 +36,5 @@ const bronn = new Escudero(
     '7'
 );
 
-const personajesArray = [joffrey, jaime, daenerys, tyrion, bronn];
+export const personajesArray = [joffrey, jaime, daenerys, tyrion, bronn];
 console.log(personajesArray);
